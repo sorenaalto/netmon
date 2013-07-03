@@ -1,0 +1,18 @@
+Skeleton of a basic monitoring system -- the agent
+can be dumped on various machines...and run minutely
+from cron.  This outputs hourly log files, grouped
+into daily directories.
+
+The logfiles are rsync'd to a central server and a
+simple viewer webapp lets us look at the logs / metric
+summaries, graphs etc.
+
+So far:
+
+- simple agent that does 10 pings and logs the 
+  # of successful pings, the min/avg/max RTT.
+- a dumb sinatra webapp that lets you browse the
+  logs and graphs the metrics in a single hourly
+  log using the google charts API.
+
+
